@@ -78,7 +78,7 @@ export default function Session() {
   const scrollRef = useRef(null);
   const recognitionRef = useRef(null);
 
-  const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3001';
+  const serverUrl = import.meta.env.VITE_SERVER_URL || '';
 
   const saveToFirestore = useCallback(async (msgs) => {
     if (!user) return;
