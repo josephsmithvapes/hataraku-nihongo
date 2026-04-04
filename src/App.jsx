@@ -5,6 +5,8 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Session from './pages/Session';
 import Stats from './pages/Stats';
+import Stories from './pages/Stories';
+import Reader from './pages/Reader';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -52,6 +54,8 @@ export default function App() {
             <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
             <Route path="/session/:topic" element={<ProtectedRoute><Session /></ProtectedRoute>} />
             <Route path="/stats" element={<ProtectedRoute><Stats /></ProtectedRoute>} />
+            <Route path="/stories" element={<ProtectedRoute><Stories /></ProtectedRoute>} />
+            <Route path="/stories/:id" element={<ProtectedRoute><Reader /></ProtectedRoute>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>
